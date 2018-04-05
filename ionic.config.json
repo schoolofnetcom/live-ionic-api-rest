@@ -1,0 +1,8 @@
+{
+  "name": "live-ionic-api-rest",
+  "app_id": "",
+  "type": "ionic-angular",
+  "integrations": {
+    "cordova": {}
+  }
+}
