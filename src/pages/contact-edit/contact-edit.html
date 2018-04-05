@@ -1,0 +1,38 @@
+<!--
+  Generated template for the ContactEditPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Editar contato {{contact.name}}</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <ion-item>
+    <ion-label stacked>Nome</ion-label>
+    <ion-input [(ngModel)]="contact.name"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label stacked>E-mail</ion-label>
+    <ion-input [(ngModel)]="contact.email"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label stacked>Telefone</ion-label>
+    <ion-input [(ngModel)]="contact.phone"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label stacked>Operadora</ion-label>
+    <ion-select [(ngModel)]="contact.cellphone_company_id">
+      <ion-option [value]="cellphone_company.id" *ngFor="let cellphone_company of cellphone_companies">
+        {{cellphone_company.name}}
+      </ion-option>
+    </ion-select>
+  </ion-item>
+  <button ion-button (click)="update()">Criar</button>
+</ion-content>
